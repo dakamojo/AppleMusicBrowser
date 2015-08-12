@@ -1,0 +1,16 @@
+﻿[
+	{
+		"name" : "Album Name 1",
+		"artist" : {
+			"name" : "Artist Name 1",
+			"rights" : "Artist Rights 1"
+			}
+	},
+	{
+		"name" : "Album Name 2",
+		"artist" : {
+			"name" : "Artist Name 2",
+			"rights" : "Artist Rights 2"
+			}
+	}
+]
