@@ -11,11 +11,9 @@ namespace AppleMusicBrowser
 
 		public AlbumListPage (AlbumListPageModel model) : base(model) {
 			InitializeComponent ();
-			albumListView.ItemsSource = model.AlbumList;
 		}
 
 		private void OnDebugButtonClicked(object sender, EventArgs args) {
-			albumListView.ItemsSource = model.AlbumList;
 		}
 	}
 }
