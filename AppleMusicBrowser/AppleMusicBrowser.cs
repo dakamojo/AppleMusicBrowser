@@ -6,10 +6,12 @@ namespace AppleMusicBrowser
 {
 	public class App : Application
 	{
+		public NavigationController NavigationController;
+
 		public App ()
 		{
-			// The root page of your application
-			MainPage = new AlbumListPage(new AlbumListPageModel());
+			NavigationController = new NavigationController(new AlbumListPageModel().Page);
+			MainPage = NavigationController.NavigationPage;
 		}
 	}
 }

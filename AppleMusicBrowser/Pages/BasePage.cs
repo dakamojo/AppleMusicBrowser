@@ -4,10 +4,9 @@ using Xamarin.Forms;
 
 namespace AppleMusicBrowser
 {
-	public class BasePage : ContentPage
+	public abstract class BasePage : ContentPage
 	{
-		public BasePage (BasePageModel model)
-		{
+		public BasePage (BasePageModel model) {
 			BindingContext = model;
 		}
 	}

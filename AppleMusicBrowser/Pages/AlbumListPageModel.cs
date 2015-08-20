@@ -17,6 +17,10 @@ namespace AppleMusicBrowser
 		private async void Init() {
 			AlbumList = await AppleMusicClient.GetTopAlbumFeed(10);
 		}
+
+		public override BasePage CreatePage () {
+			return new AlbumListPage (this);
+		}
 	}
 }
 
