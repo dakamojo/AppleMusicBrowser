@@ -16,7 +16,7 @@ namespace AppleMusicBrowser
 			};
 			debugButton.Clicked += (object sender, EventArgs e) => {
 				int n = model.AlbumList.Count;
-//				listView.ItemsSource = model.AlbumList;
+				listView.ItemsSource = model.AlbumList;
 			};
 
 			listView = new ListView () {
