@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using PropertyChanged;
 
@@ -12,10 +13,14 @@ namespace AppleMusicBrowser
 		public AlbumListPageModel ()
 		{
 			Init ();
+			AlbumList = new ObservableCollection<Album> ();
 		}
 
 		private async void Init() {
-			AlbumList = await AppleMusicClient.GetTopAlbumFeed(10);
+			ObservableCollection<Album> list = await AppleMusicClient.GetTopAlbumFeed(10);
+
+			foreach (Album album in list)
+				AlbumList.Add (album);
 		}
 
 		public override BasePage CreatePage () {
